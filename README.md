@@ -123,6 +123,19 @@ cd web       && npm run dev
 打开 <http://localhost:3000>。首次启动推理服务需要加载模型，请等待
 `GET /health` 返回 `{"ready": true, "device": "cuda"}`。
 
+### 4. 没有 GPU 也能跑（stub 模式）
+
+只想看界面和交互、不想下载 2.6 GB 权重的，可以跳过第 1 步，并让业务层使用占位推理：
+
+```bash
+# server/.env
+VTON_INFERENCE_PROVIDER=stub
+```
+
+此时不需要启动 `inference` 服务，`server` + `web` 两个进程即可。上传、建任务、轮询、
+衣橱、档案、前后对比的完整流程都能走通，只是任务返回的是原图而不是合成结果
+（`stub` 的实现见 `server/app/inference/stub.py`，只有几行）。
+
 ## API
 
 | 方法 | 路径 | 说明 |
