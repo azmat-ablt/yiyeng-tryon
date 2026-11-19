@@ -1,0 +1,42 @@
+# ===== 依赖与构建产物 =====
+node_modules/
+.next/
+out/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.tsbuildinfo
+
+# ===== 运行时数据（用户上传图、生成成图、衣橱/档案索引）=====
+data/
+*.log
+
+# ===== 环境变量（含本机地址与潜在密钥，只提交 .env.example）=====
+.env
+.env.local
+.env.*.local
+*.bak
+
+# ===== 模型权重与推理依赖（体积过大，按 README 自行下载）=====
+inference/models/
+inference/wheels/
+inference/.hf-cache/
+
+# ===== 第三方代码与本地工具（不入库，按 README 自行获取）=====
+inference/vendor/
+inference/tools/
+inference/_bench_output/
+
+# ===== 编辑器与系统 =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.trae-html-share-packages/
+web/_backup/
+
+# 早期亮色 UI 预览稿，仅本地留存
+ui-preview.html
