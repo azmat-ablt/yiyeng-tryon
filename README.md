@@ -62,7 +62,8 @@
 │   └── masker.py             # SCHP 人体解析与掩码构建
 ├── 启动衣影.bat              # 一键启动三个服务（Windows）
 ├── 关闭衣影.bat
-└── start-api.bat             # 只重启业务 API
+├── start-api.bat             # 只重启业务 API
+└── 推送更新.bat              # 提交并推送到 GitHub（Windows）
 ```
 
 ## 快速开始
